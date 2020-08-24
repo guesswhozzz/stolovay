@@ -1,10 +1,20 @@
 @font-face {
-  font-family: "Myriad Pro ligth exd";
-  src: url(../fonts/Myriad-Pro-Light-SemiExtended_31641.ttf);
+  font-family: "Myriad Pro Semi Ext";
+  src: url("../fonts/MyriadPro-LightSemiExt.eot") format("eot"),
+    url("../fonts/MyriadPro-LightSemiExt.ttf") format("ttf"),
+    url("../fonts/MyriadPro-LightSemiExt.woff") format("woff");
 }
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../fonts/MyriadPro-Regular.eot") format("eot"),
+    url("../fonts/MyriadPro-Regular.ttf") format("ttf"),
+    url("../fonts/MyriadPro-Regular.woff") format("woff");
+}
+
 @import "./sterilization";
-$mainfont: "Myriad Pro ligth exd";
+$mainfont: "Myriad Pro Semi Ext";
 $subfont: "Myriad Pro";
+
 $mainorange: #ffaf2d;
 $maingreen: #00aa4b;
 $subgreen: #33bb6f;
