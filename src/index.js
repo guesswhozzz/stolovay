@@ -16,9 +16,6 @@ class ModalWindows {
   get modalStatus() {
     return this.$modal.classList.contains("modal-open");
   }
-  get scrollStatus() {
-    return this.modalStatus ? "hidden" : "";
-  }
   modalToggle() {
     this.modalStatus ? this.close() : this.open();
   }
@@ -51,9 +48,6 @@ class ModalWindows {
       AllModalWindows.set(this, "AllModalWindows");
     });
   }
-  blockScroll() {
-    document.body.style.overflowY = this.scrollStatus;
-  }
 }
 /*
  * PHONE MODAL WINDOW
@@ -68,7 +62,6 @@ class PhoneModal extends ModalWindows {
   PhoneModalListiner() {
     super.modalToggle();
     super.bgToggle();
-    super.blockScroll();
   }
   setup() {
     this.$modal.addEventListener("click", (e) => {
@@ -168,7 +161,6 @@ class CatergoriesModal extends ModalWindows {
 
   categoriesListiner() {
     super.modalToggle();
-    super.blockScroll();
     super.bgToggle();
   }
 
